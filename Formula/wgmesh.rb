@@ -1,30 +1,30 @@
 class Wgmesh < Formula
   desc "WireGuard mesh network builder - decentralized peer discovery and encrypted networking"
   homepage "https://github.com/atvirokodosprendimai/wgmesh"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v#{version}/wgmesh-darwin-arm64"
-      sha256 "4286d03bd82165b0cbf29847a28b507e36b02482149beefb156ed8ab37056bf1"
+      sha256 "c72ebe09edb40a9726db270db8675c41c47b5bee0544df6a550a093222edf5cc"
     end
 
     on_intel do
       url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v#{version}/wgmesh-darwin-amd64"
-      sha256 "a3e37ff8b262b40aa862d2de72410d073f340b466973f5612aa55cf331113aa3"
+      sha256 "404727cdba40d3bd997ae079705fce3ac94f8f42c5323e6e78d2c3e64c6b1492"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v#{version}/wgmesh-linux-arm64"
-      sha256 "f277448e3f7626ddbecb1b71976f506bd6f681413b06e86d51e0b288c180d635"
+      sha256 "75d14826153a0a323fccd1d562f35712da9b8ef9ff98ba5d710bcc4c6ed28f93"
     end
 
     on_intel do
       url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v#{version}/wgmesh-linux-amd64"
-      sha256 "f8a650e953a2ab12e054c7bbaf5286dfde0e315062feff871e735baea277c17e"
+      sha256 "97eca3dfc67720b84f57ee0125e0859e4d452e740ee708983016c8c4e39ce446"
     end
   end
 
@@ -34,6 +34,6 @@ class Wgmesh < Formula
   end
 
   test do
-    assert_match "Usage", shell_output("#{bin}/wgmesh --help 2>&1", 0)
+    assert_match "wgmesh", shell_output("#{bin}/wgmesh version 2>&1", 0)
   end
 end
