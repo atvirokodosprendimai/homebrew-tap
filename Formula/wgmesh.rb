@@ -5,21 +5,21 @@
 class Wgmesh < Formula
   desc "WireGuard mesh network — decentralized peer discovery and encrypted networking"
   homepage "https://github.com/atvirokodosprendimai/wgmesh"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.0/wgmesh_0.2.0_darwin_amd64.tar.gz"
-      sha256 "8b9add325db310a9146adf456f6888dae2c9ba57b9be6fa652804a63ff69a3f3"
+      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.1/wgmesh_0.2.1_darwin_amd64.tar.gz"
+      sha256 "7c4ca9ba1ce2abd38666696fb60aba05a2d11de9dd296b50a6b7adabe88f8e3c"
 
       define_method(:install) do
         bin.install "wgmesh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.0/wgmesh_0.2.0_darwin_arm64.tar.gz"
-      sha256 "6583240e91561b735d37a725fe09dcc24d2ff799f4fa506fc426183eead91435"
+      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.1/wgmesh_0.2.1_darwin_arm64.tar.gz"
+      sha256 "aeefa145332e0dcf744fea041e94a07d96e51a3d6483df880daec1fa6ac7fc9b"
 
       define_method(:install) do
         bin.install "wgmesh"
@@ -29,15 +29,15 @@ class Wgmesh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.0/wgmesh_0.2.0_linux_amd64.tar.gz"
-      sha256 "e22456b5326d51db55f7fc000cd5d11ec82ad9e5194d62f10fa463bcde38d0f9"
+      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.1/wgmesh_0.2.1_linux_amd64.tar.gz"
+      sha256 "c8c886fb3a4ad9c317c6fe81594b37f44dab3e44dbb8d31393ff52323079d71f"
       define_method(:install) do
         bin.install "wgmesh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.0/wgmesh_0.2.0_linux_arm64.tar.gz"
-      sha256 "ae28389dc1baa3cb842f8f0915fad25aaf0aa9833c826a8064869eaaa18f526a"
+      url "https://github.com/atvirokodosprendimai/wgmesh/releases/download/v0.2.1/wgmesh_0.2.1_linux_arm64.tar.gz"
+      sha256 "b007030c22110f6ae51a924054cb195da7a7d347ef12074a3270a75b44f98435"
       define_method(:install) do
         bin.install "wgmesh"
       end
